@@ -1,0 +1,8 @@
+.vs/
+.vscode/
+build/
+dist/
+*.zip
+*.tar.gz
+out/
+CMakeSettings.json
