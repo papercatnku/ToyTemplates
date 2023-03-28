@@ -24,11 +24,11 @@ static A aa({4, 5.0f, "efg hijk"});
 static B b({{1, 2, 3}, {1.0f, 2.0f, 3.0f}, (void *)(&a)});
 static B bb({{}, {1.0f}, nullptr});
 
-PFG_REGISTER(A, a, std::string("a"));
-PFG_REGISTER(A, aa, "aa");
+PPG_REGISTER(A, a, std::string("a"));
+PPG_REGISTER(A, aa, "aa");
 
-PFG_REGISTER(B, b, "b");
-PFG_REGISTER(B, bb, "bb");
+PPG_REGISTER(B, b, "b");
+PPG_REGISTER(B, bb, "bb");
 
 void printA(const A *pa) {
   if (pa) {

@@ -39,9 +39,9 @@ protected:
 };
 } // namespace PocketToyTemplates
 
-#define PFG_CONNECTION(text1, text2) text1##_##text2
-#define PFG_CONNECT(text1, text2) PFG_CONNECTION(text1, text2)
-#define PFG_REGISTER_NAME(TYPE_NAME, TYPE_VAR) PFG_CONNECT(TYPE_NAME, TYPE_VAR)
-#define PFG_REGISTER(TYPE_NAME, TYPE_VAR, KEY)                                 \
-  static PocketParamGen<TYPE_NAME>::Register PFG_REGISTER_NAME(                \
-      TYPE_NAME, TYPE_VAR)(KEY, &(TYPE_VAR))
+#define PPG_CONNECTION(text1, text2) text1##_##text2
+#define PPG_CONNECT(text1, text2) PPG_CONNECTION(text1, text2)
+#define PPG_REGISTER_NAME(TYPE_NAME, TYPE_VAR) PPG_CONNECT(TYPE_NAME, TYPE_VAR)
+#define PPG_REGISTER(TYPE_NAME, TYPE_VAR, KEY)                                 \
+  static PocketToyTemplates::PocketParamGen<TYPE_NAME>::Register               \
+  PPG_REGISTER_NAME(TYPE_NAME, TYPE_VAR)(KEY, &(TYPE_VAR))
